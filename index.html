@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="github-api">
+
+<head>
+  <meta charset="UTF-8">
+  <title>GitHub user lookup</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.12/angular.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body ng-controller="githubCtrl">
+  <div class="container">
+
+    <div class="inputDiv">
+      <form ng-submit="getUserData()">
+        <input class="input" type="text" placeholder="Search Users" ng-model="searchText">
+        <button>Search</button>
+      </form>
+    </div>
+
+    <div class="avatar-container">
+      <img class="avatar" src="{{user.avatar_url}}">
+    </div>
+    <ul class="list">
+      <li>NAME: {{user.name}}</li>
+      <li>EMAIL:{{user.email}}</li>
+      <li>COMPANY:{{user.company}}</li>
+    </ul>
+    <div>
+      <div class="info">
+        <div class="infoStuff">{{user.public_repos}}</div>
+        <div class="infoStuff">{{user.followers}}</div>
+        <div class="infoStuff">{{user.following}}</div>
+      </div>
+      <div>
+        <div class="infoStuff">Repos</div>
+        <div class="infoStuff">Followers</div>
+        <div class="infoStuff">Following</div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <script src="js/app.js"></script>
+  <script src="js/controller.js"></script>
+  <script src="js/service.js"></script>
+</body>
+
+</html>
