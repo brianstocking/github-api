@@ -4,8 +4,7 @@ var app = angular.module('github-api');
 
 app.service('githubService', function ($http) {
 
-  var id = "NA";
-  var sec = "NA";
+
   var param = "?client_id=" + id + "&client_secret=" + sec;
 
 
